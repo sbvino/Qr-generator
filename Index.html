@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Custom QR Code Generator</h1>
+        
+        <!-- Input for QR code data -->
+        <label for="qrData">Enter Data (URL, Text, etc.):</label>
+        <input type="text" id="qrData" placeholder="Enter URL or Text" />
+
+        <!-- Color picker for QR code customization -->
+        <label for="foregroundColor">Foreground Color:</label>
+        <input type="color" id="foregroundColor" value="#000000" />
+
+        <label for="backgroundColor">Background Color:</label>
+        <input type="color" id="backgroundColor" value="#FFFFFF" />
+
+        <!-- Image upload for logo -->
+        <label for="logoUpload">Upload Logo:</label>
+        <input type="file" id="logoUpload" accept="image/*" />
+
+        <!-- Button to generate the QR code -->
+        <button id="generateQRCodeBtn">Generate QR Code</button>
+
+        <!-- Div to display the generated QR Code -->
+        <div id="qrCodeOutput" class="qr-output">
+            <!-- QR Code will be injected here -->
+        </div>
+
+        <!-- Download QR Code -->
+        <button id="downloadQRCodeBtn">Download QR Code</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
